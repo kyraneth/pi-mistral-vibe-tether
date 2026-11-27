@@ -1,0 +1,64 @@
+{
+  "name": "pi-mistral-vibe-tether",
+  "version": "0.1.0",
+  "description": "Use Mistral Vibe in Pi through the official vibe-acp server",
+  "main": "index.ts",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "mistral",
+    "vibe",
+    "acp",
+    "provider"
+  ],
+  "pi": {
+    "extensions": [
+      "index.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyraneth/pi-mistral-vibe-tether.git"
+  },
+  "homepage": "https://github.com/kyraneth/pi-mistral-vibe-tether",
+  "bugs": {
+    "url": "https://github.com/kyraneth/pi-mistral-vibe-tether/issues"
+  },
+  "author": "kyraneth",
+  "license": "MIT",
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.6",
+    "pi-tether-core": "0.1.1"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "1.5.0",
+    "@earendil-works/pi-coding-agent": "1.5.0",
+    "@types/cross-spawn": "^6.0.6",
+    "@types/node": "^22.0.0",
+    "typebox": "1.3.27",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "scripts": {
+    "test": "vitest run --reporter=verbose",
+    "typecheck": "tsc --noEmit",
+    "scan:public": "node scripts/check-public-tree.mjs",
+    "smoke:installed": "bash scripts/smoke-installed.sh"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "index.ts",
+    "src/",
+    "README.md",
+    "SOURCE.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ]
+}
